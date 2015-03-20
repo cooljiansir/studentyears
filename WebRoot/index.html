@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="product" content="Metro UI CSS Framework">
+    <meta name="description" content="Simple responsive css framework">
+    <meta name="author" content="Sergey S. Pimenov, Ukraine, Kiev">
+
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
+	
+
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/metro.min.js"></script>
+
+    <title>匆匆那年</title>
+</head>
+<body class="metro">
+	<header class="bg-dark">
+		<div class="navigation-bar light fixed-top">
+    <div class="navigation-bar-content container">
+        <a href="/" class="element">永酷的志坚</a>
+        <span class="element-divider"></span>
+
+        <a class="element1 pull-menu" href="#"></a>
+        <ul class="element-menu place-right">
+			<li class="bg-yellow"><a href="template-news-portal.html">发布信息</a></li>
+			<li>
+                <a href="#">收藏夹</a>
+            </li>
+			<li>
+                <a href="#">商品分类</a>
+            </li>
+            <li>
+                <a  href="#">联系客服</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+</header>
+    <div class="container">
+		<div class="grid">
+			<div class="row">
+				<div class="span7"><img src="images/studentyears.png" style="width:280px;"/></div>
+				<div class="input-control text span7" style="margin-top:25px">
+					<input type="text" placeholder="Search..."/>
+					<button class="btn-search"></button>
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="row">
+				<nav class="sidebar light span3">
+					<ul>
+						<li class="stick"><a href="#"><i class="icon-home"></i>闲置数码</a></li>
+						<li class="stick "><a href="#"><i class="icon-cog"></i>家居日用</a></li>
+						<li class="stick "><a href="#"><i class="icon-cog"></i>影音家电</a></li>
+						<li class="stick "><a href="#"><i class="icon-cog"></i>教辅书籍</a></li>
+						<li class="stick "><a href="#"><i class="icon-cog"></i>鞋服配饰</a></li>
+
+					</ul>
+				</nav>
+
+				<div class="carousel span8" id="carousel1">
+					<div class="slide">
+						<img src="images/1.jpg" class="cover1" />
+					</div>
+
+					<div class="slide">
+						<img src="images/2.jpg" class="cover1" />
+					</div>
+
+					<div class="slide">
+						<img src="images/3.jpg" class="cover1"/>
+					</div>
+
+				</div>
+				<script>
+					$(function(){
+						$("#carousel1").carousel({
+							height: 205
+						});
+					})
+				</script>
+				<div class="span3">
+					
+					<div class="listview">
+    <a href="#" class="list">
+        <div class="list-content">
+            <img src="images/excel2013icon.png" class="icon">
+            <div class="data">
+                <span class="list-title">Excel 2013</span>
+                <div class="rating small no-margin" data-role="rating"
+                        data-stars="5"></div>
+                <span class="list-remark">Price: $1</span>
+            </div>
+        </div>
+    </a>
+ 
+    <a href="#" class="list shadow">
+        <div class="list-content">
+            <span class="icon icon-location fg-lightBlue"></span>
+            <div class="data">
+                <span class="list-title">You location</span>
+                <div class="rating small no-margin fg-dark" data-score="4"
+                        data-role="rating" data-stars="5"></div>
+                <span class="list-remark">Price: $1</span>
+            </div>
+        </div>
+    </a>
+ 
+    <a href="#" class="list selected">
+        <div class="list-content">
+            <img src="images/onenote2013icon.png" class="icon">
+            <div class="data">
+                <span class="list-title">Word 2013</span>
+                <div class="progress-bar small" data-role="progress-bar"
+                        data-value="75"></div>
+                <span class="list-remark">Download...75%</span>
+            </div>
+        </div>
+    </a>
+</div>
+					
+				</div>
+			</div>
+		</div>
+		
+				<h1>
+                    <a href="/"><i class="icon-arrow-left-3 fg-darker smaller"></i></a>
+                    Carousel<small class="on-right">component</small>
+                </h1>
+
+                <p class="description">
+                    The slideshow below shows a generic plugin and component for cycling through elements like a carousel.
+                </p>
+
+                    <div class="grid">
+                        <div class="row">
+                        </div>
+                    </div>
+
+
+                <h3 id="_basic">Basic carousel HTML</h3>
+                <p class="description">
+                    Metro UI CSS provides carousel component. You must use next <code>html</code> definition to create <code>carousel</code>:
+                </p>
+		 <h1>
+                    <a href="/"><i class="icon-arrow-left-3 fg-darker smaller"></i></a>
+                    Carousel<small class="on-right">component</small>
+                </h1>
+
+                <p class="description">
+                    The slideshow below shows a generic plugin and component for cycling through elements like a carousel.
+                </p>
+
+                    <div class="grid">
+                        <div class="row">
+                        </div>
+                    </div>
+
+
+                <h3 id="_basic">Basic carousel HTML</h3>
+                <p class="description">
+                    Metro UI CSS provides carousel component. You must use next <code>html</code> definition to create <code>carousel</code>:
+                </p>
+		 <h1>
+                    <a href="/"><i class="icon-arrow-left-3 fg-darker smaller"></i></a>
+                    Carousel<small class="on-right">component</small>
+                </h1>
+
+                <p class="description">
+                    The slideshow below shows a generic plugin and component for cycling through elements like a carousel.
+                </p>
+
+                    <div class="grid">
+                        <div class="row">
+                        </div>
+                    </div>
+
+
+                <h3 id="_basic">Basic carousel HTML</h3>
+                <p class="description">
+                    Metro UI CSS provides carousel component. You must use next <code>html</code> definition to create <code>carousel</code>:
+                </p>
+ <h1>
+                    <a href="/"><i class="icon-arrow-left-3 fg-darker smaller"></i></a>
+                    Carousel<small class="on-right">component</small>
+                </h1>
+
+                <p class="description">
+                    The slideshow below shows a generic plugin and component for cycling through elements like a carousel.
+                </p>
+
+                    <div class="grid">
+                        <div class="row">
+                        </div>
+                    </div>
+
+
+                <h3 id="_basic">Basic carousel HTML</h3>
+                <p class="description">
+                    Metro UI CSS provides carousel component. You must use next <code>html</code> definition to create <code>carousel</code>:
+                </p>
+    </div>
+</body>
+</html>
