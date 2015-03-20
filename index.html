@@ -7,7 +7,8 @@
 
 	<meta charset="utf-8">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="js/jquery.min.js" ></script>	
+	<script src="js/jquery.min.js" ></script>
+	<script src="js/bootstrap.min.js" ></script>
 	<style >
 		body{padding-top: 75px;color: #888}
 		#navbarf{background: white;border: none;}
@@ -36,6 +37,8 @@
 		#main .itemimg{width: 242.5px;height: 242.5px;margin-bottom: 20px;}
 		#main .price{font-size: 14pt; background: #e7e7e7; color: #D06C5C; height: 30px; width: 60px;margin:auto;border-radius: 4px;text-align: center;padding-top: 2px;}
 		#main .loc{text-align: center;margin-top: 20px;margin-bottom: 10px;}
+		.text-center{text-align: center}
+		.formlogo{width:150px;}
 	</style>
 
 </head>
@@ -56,11 +59,11 @@
             <li><a href="#" id="toplogotxt">STUDENTYEARS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-			<li><a href="../navbar/" ><span id="postnav">上传</span></a></li>  
+			<li><a href="#" id="releaseBut"><span id="postnav">上传</span></a></li>  
 			<li><a href="../navbar/"><span class="divider"></span></a></li>
-            <li><a href="../navbar/">注册</a></li>
+            <li><a href="#" id="registerBut">注册</a></li>
 			<li><a href="../navbar/"><span class="divider"></span></a></li>
-			<li ><a href="./">登陆 <span class="sr-only">(current)</span></a></li>
+			<li ><a href="#" id="loginBut">登陆 <span class="sr-only">(current)</span></a></li>
 			<li><a href="../navbar/"><span class="divider"></span></a></li>
             <li><a href="../navbar-static-top/">关于我们</a></li>
           </ul>
@@ -71,7 +74,7 @@
 		<div id="header1">
 			<div class="col-xs-12 col-sm-6">
 				<img id="headerlogo" src="images/headlogo.png" class="pull-left"/>
-				<div id="head1right">
+				<div id="head1right" >
 					<h1>匆匆那年<img id="fadingaway" src="images/fadingaway.png"/></h1>
 					<h3>把你不要的给我，把你想要的拿去</h3>
 				</div>
@@ -93,7 +96,7 @@
 				<span id="dropdownfilter" class="glyphicon glyphicon-menu-down  pull-right" ></span>
 			</div>
 			<div class="col-xs-0 col-sm-3" id="countdiv">
-				<span class="pull-right">一共238件</span>
+				<span class="pull-right ">一共238件</span>
 			</div>
 		</div>
     </div> <!-- /container -->
@@ -162,6 +165,160 @@
 			</div>
 		</div>
 	</div>
+	<div class="container">
+		<!-- Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"> 登 陆 </h4>
+			  </div>
+			  <div class="modal-body">
+				  <div class="text-center">
+					  <img class="formlogo" src="images/headlogo.png"/>
+				  </div>
+				  <form class="form-horizontal">
+					  <div class="form-group">
+						<div class="col-sm-12">
+						  <input type="email" class="form-control" id="inputEmail3" placeholder="邮箱">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12">
+						  <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12 text-center">
+						  <div class="checkbox">
+							<label>
+							  <input type="checkbox">记住密码
+							</label>
+						  </div>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12 text-center">
+						  <button type="submit" class="btn btn-default">登陆</button>
+						</div>
+					  </div>
+					</form>  
+			  </div>
+			  <div class="modal-footer"></div>
+			  
+			</div>
+		  </div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"> 注 册 </h4>
+			  </div>
+			  <div class="modal-body">
+
+				  <div class="text-center">
+					  <img class="formlogo" src="images/headlogo.png"/>
+				  </div>
+
+				  <form class="form-horizontal">
+					  <div class="form-group">
+						<div class="col-sm-12">
+						  <input type="email" class="form-control" id="inputEmail3" placeholder="邮箱">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12">
+						  <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12">
+						  <input type="password" class="form-control" id="inputPassword3" placeholder="确认密码">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12">
+<!--						  <input type="email" class="form-control" id="inputEmail3" placeholder="学校">-->
+							  <select class="form-control" >
+								<option value="0">请选择学校</option>  
+								<option value="1">中国科学院大学</option>
+							  </select>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12">
+						  <select class="form-control" >
+							<option value="0">请选择校区</option>  
+							<option value="1">怀柔校区</option>
+							<option value="2">中关村校区</option>
+							<option value="3">玉泉路校区</option>
+							<option value="4">奥运村校区</option>
+			  			  </select>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-12 text-center">
+						  <button type="submit" class="btn btn-default">注册</button>
+						</div>
+					  </div>
+					</form>  
+			  </div>
+			  <div class="modal-footer"></div>
+			  
+			</div>
+		  </div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="releaseModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel"> 发 布 </h4>
+			  </div>
+			  <div class="modal-body">
+				  <div class="container">
+				<div class="row"  >
+					<div class=""><img class="col-xs-2 col-md-2" src="images/headlogo.png"/> </div>
+				<div class="col-md-7">
+					<form >
+				  <div class="form-group form-inline">
+					<label for="recipient-name" class="control-label">商品名：</label>
+					<input type="text" class="form-control" id="recipient-name">
+				  </div>
+				  <div class="form-group form-inline">
+					<label for="message-text" class="control-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:</label>
+					<input type="password" class="form-control" id="recipient-name">
+				  </div>
+				  <div class="form-group form-inline">
+					<label for="message-text" class="control-label">确认密码:</label>
+					<input type="password" class="form-control" id="recipient-name">
+				  </div>
+				  <div class="form-group form-inline">
+					<label for="message-text" class="control-label">&nbsp;&nbsp;&nbsp;&nbsp;验证码:</label>
+					<input type="password" class="form-control" id="recipient-name">
+				  </div>
+				</form>
+					</div>
+					</div></div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default">注 册</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+	</div>
+	
+<script type="text/javascript"  src="js/studentyears.js"></script>
 </body>
 </html>
 
