@@ -3,6 +3,7 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.studentyears.Database.DbManager;
+import com.studentyears.Database.DbPool;
 
 
 public class LoginAction extends ActionSupport
@@ -27,18 +28,21 @@ public class LoginAction extends ActionSupport
 	@Override
 	public String execute() throws Exception {
 	//if("haha".equals(username) && "hehe".equals(password))
-	if(loginConfirm(username)){
-		ServletActionContext.getRequest().getSession().setAttribute("user", "leilei");
+	if(loginConfirm(username, password)){
+		ServletActionContext.getRequest().getSession().setAttribute("user", username);
+		System.out.println("ok");
 		return SUCCESS;
 	}
 	  return LOGIN;
 	 }
 	
-	public boolean loginConfirm(String name)
+	public boolean loginConfirm(String name, String password)
 	{
-		DbManager dbManager = new DbManager();
-		String sqlString = "select * from student where studentId = ?";
+		DbPool dbPool = new DbPool();
+		String sqlString = "select * from user where email=\"?\" and password=\"?\";";
 		sqlString = sqlString.replaceFirst("\\?", name);
-		return dbManager.exist(sqlString);
+		sqlString = sqlString.replaceFirst("\\?", password);
+		System.out.println(sqlString);
+		return dbPool.exist(sqlString);
 	}
 }

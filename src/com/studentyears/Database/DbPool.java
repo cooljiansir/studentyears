@@ -25,7 +25,7 @@ public class DbPool{
     Statement sm = null;
     ResultSet rs;
 	
-	DbPool(){
+	public DbPool(){
 		try {
 			initContext = new InitialContext();
 		} catch (NamingException e) {
@@ -118,7 +118,7 @@ public class DbPool{
     /*
      * 表名和类名要求相同
      */
-    public void insert(Object target) throws SecurityException, NoSuchMethodException, ClassNotFoundException, IllegalArgumentException, IllegalAccessException, InvocationTargetException{
+    public void insert(Object target) {
     	Class testClass = target.getClass();
     	String table = testClass.getSimpleName().toLowerCase();
     	String blankString = ReflectMethod.blankString(ReflectMethod.getFieldLength(target));
@@ -133,8 +133,36 @@ public class DbPool{
 		            Class<?> type = field[i].getType();
 		            System.out.println(type.getName() + " " + field[i].getName() + ";");
 		            String simpleClass = type.getSimpleName();
-		            Method method = ps.getClass().getMethod("set" + simpleClass, int.class, Class.forName(type.getName()));
-		            method.invoke(ps, i+1, (Object)ReflectMethod.getter(target, field[i].getName()));
+		            Method method = null;
+					try {
+						if (type.getName() == "int") {
+							method = ps.getClass().getMethod("setInt", int.class, int.class);
+						}
+						else {
+							method = ps.getClass().getMethod("set" + simpleClass, int.class, Class.forName(type.getName()));
+						}
+					} catch (SecurityException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (NoSuchMethodException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (ClassNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		            try {
+						method.invoke(ps, i+1, (Object)ReflectMethod.getter(target, field[i].getName()));
+					} catch (IllegalArgumentException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (InvocationTargetException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 		        }
 			ps.executeUpdate();
 			

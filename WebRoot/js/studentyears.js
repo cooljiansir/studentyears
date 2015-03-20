@@ -1,0 +1,9 @@
+$("#loginBut").click(function(){
+	$('#loginModal').modal('show');
+});
+$("#registerBut").click(function(){
+	$('#registerModal').modal('show');
+});
+$("#releaseBut").click(function(){
+	$('#releaseModal').modal('show');
+});

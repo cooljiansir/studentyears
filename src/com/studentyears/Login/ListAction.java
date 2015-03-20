@@ -37,9 +37,9 @@ public class ListAction extends ActionSupport {
 	public void fill() throws SecurityException, IllegalArgumentException, NoSuchMethodException, ClassNotFoundException, 
 		IllegalAccessException, InvocationTargetException, FileNotFoundException, NamingException, SQLException{
 		userArrayList = new ArrayList<User>();
-		userArrayList.add(new User("images/b1.jpg"));
-		userArrayList.add(new User("images/b1.jpg"));
-		userArrayList.add(new User(getIpAddr(ServletActionContext.getRequest())));
+		//userArrayList.add(new User("images/b1.jpg"));
+		//userArrayList.add(new User("images/b1.jpg"));
+		//userArrayList.add(new User(getIpAddr(ServletActionContext.getRequest())));
 		//userArrayList.add(new User(dbOpt()));
 		//userArrayList.add(new User("afdf"));
 	}
