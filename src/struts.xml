@@ -4,12 +4,18 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-	<constant name="struts.devMode" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<constant name="struts.multipart.saveDir" value="/multiupload"/>
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+    <constant name="struts.multipart.maxSize" value="10701096"/>
 	
     <package name="default" namespace="/" extends="struts-default">
        	<action name="login" class="com.studentyears.Login.LoginAction" method="execute">
             <result name="success">/welcome.jsp</result>
             <result name="login">/test.jsp</result>
+            
         </action>
         <action name="login1" class="com.studentyears.Login.ListAction" method="execute">
             <result name="success">/showlist.jsp</result>
@@ -22,7 +28,12 @@
         <action name="regist" class="com.studentyears.Login.RegistAction" method="execute">  
             <result name="success">/test.jsp</result>  
             <result name="input">/upload.jsp</result>  
-        </action>  
+        </action>
+        <action name="multiupload" class="com.studentyears.network.PublishAction" method="execute">  
+            <result name="success">/test.jsp</result>  
+            <result name="error">/upload.jsp</result> 
+            <result name="Upresult">/Upresult.jsp</result>  
+        </action>
     </package>
     
     <package name="struts2" extends="struts-default">

@@ -1,6 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
-
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <%  
 String path = request.getContextPath();  
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
@@ -26,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
 <center>  
     <h1>Struts 2完成上传</h1>  
-      <form action="upload.action" method="post" enctype="multipart/form-data">  
+      <form action="multiupload.action" method="post" enctype="multipart/form-data">  
         <table>  
             <tr>  
                 <td>用户名:</td>  
@@ -34,7 +33,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </tr>  
             <tr>  
                 <td>上传文件:</td>  
-                <td><input type="file" name="myFile"></td>  
+                <td><input type="file" name="image"></td>  
+            </tr>  
+            <tr>  
+                <td>上传文件:</td>
+                <td><input type="file" name="image"></td>  
             </tr>  
             <tr>  
                 <td><input type="submit" value="上传"></td>  

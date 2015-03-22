@@ -8,7 +8,7 @@ import org.apache.struts2.ServletActionContext;
 
 import com.studentyears.IpSeeker.IPSeeker;
 
-public class MyUtils {
+public class NetworkUtils {
 	
 	public static String getAddress()
 	{

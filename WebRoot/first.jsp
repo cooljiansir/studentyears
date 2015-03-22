@@ -62,7 +62,7 @@
             <li><a href="#" id="toplogotxt">STUDENTYEARS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-			<li><a href="#" id="releaseBut"><span id="postnav">上传</span></a></li>  
+			<li><a href="release.jsp" id="releaseBut"><span id="postnav">上传</span></a></li>  
 			<li><a href="../navbar/"><span class="divider"></span></a></li>
             <li><a href="#" id="registerBut">注册</a></li>
 			<li><a href="../navbar/"><span class="divider"></span></a></li>

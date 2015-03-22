@@ -12,4 +12,16 @@ public class StringUtils {
 		}
 		return tempsStrings;
 	}
+	
+	public static String getSuffix(String filename)
+	{
+		return filename.replaceAll("^.*\\.", "");
+	}
+	
+	public static String genImageName(int index, String filename)
+	{
+		
+		return "image"+index+"."+StringUtils.getSuffix(filename);
+	}
+
 }

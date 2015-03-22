@@ -3,6 +3,7 @@ package com.studentyears.Login;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class HerfAction extends ActionSupport{
+	
 	private String id;
 
 	public String getId() {

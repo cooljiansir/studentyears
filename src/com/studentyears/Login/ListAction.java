@@ -22,7 +22,7 @@ import com.opensymphony.xwork2.Preparable;
 import com.studentyears.Database.DbManager;
 import com.studentyears.IpSeeker.IPLocation;
 import com.studentyears.IpSeeker.IPSeeker;
-import com.studentyears.Model.Student;
+import com.studentyears.Model.GoodsOrder;
 import com.studentyears.Model.User;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 

@@ -12,7 +12,7 @@ import com.studentyears.IpSeeker.IPSeeker;
 import com.studentyears.IpSeeker.Utils;
 import com.studentyears.Model.User;
 import com.studentyears.Utils.DateUtils;
-import com.studentyears.Utils.MyUtils;
+import com.studentyears.Utils.NetworkUtils;
 import com.studentyears.Utils.StringUtils;
 
 public class RegistAction extends ActionSupport{
@@ -60,7 +60,7 @@ public class RegistAction extends ActionSupport{
 	
 	public String getRegistLocation()
 	{
-		return MyUtils.getAddress();
+		return NetworkUtils.getAddress();
 	}
 	
 	public void registToDatabase()

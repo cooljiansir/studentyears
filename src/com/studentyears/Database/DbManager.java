@@ -12,7 +12,7 @@ public class DbManager
     private static String driver = "com.mysql.jdbc.Driver";
     private static String url = "jdbc:mysql://localhost:3306/studentyears";
     private static String user = "root";
-    private static String password = "";
+    private static String password = "123456";
     Connection ct;
     PreparedStatement ps;
     Statement sm = null;

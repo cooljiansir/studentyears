@@ -94,30 +94,30 @@
 		<div class="col-md-offset-2 col-md-7 block-center">
 			 
 			
-			<form class="form-horizontal ">
+			<form class="form-horizontal " action="#" method="post" id="releaseForm" enctype="multipart/form-data">
 			 
-    		  <input name="file" type="file" multiple />
+    		  <input name="image" type="file" multiple />
 			  <div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">商品名</label>
 				<div class="col-sm-10">
-				  <input type="email" class="form-control" id="inputEmail3" placeholder="不多于25字">
+				  <input name="title" class="form-control" id="inputEmail3" placeholder="不多于25字">
 				</div>
 			  </div>
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">商品描述</label>
 				<div class="col-sm-10">
-					<textarea class="form-control" rows="5" placeholder="建议填写物品用途、新旧程度、原价等信息，至少15个字"></textarea>
+					<textarea name="description" class="form-control" rows="5" placeholder="建议填写物品用途、新旧程度、原价等信息，至少15个字"></textarea>
 				</div>
 			  </div>
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">交易地点</label>
 				<div class="col-sm-5">
-					<select class="form-control" >
+					<select name="tradelocation" class="form-control" >
 						<option>中国科学院大学</option>
 					</select>
 				</div>
 				<div class="col-sm-5">
-					<select class="form-control" >
+					<select name="littlelocation" class="form-control" >
 						<option>怀柔校区</option>
 						<option>中关村校区</option>
 						<option>玉泉路校区</option>
@@ -128,19 +128,19 @@
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">价格</label>
 				<div class="col-sm-5">
-					<input type="email" class="form-control" id="inputEmail3" placeholder="">
+					<input name="price" class="form-control" id="inputEmail3" placeholder="">
 				</div>
 			  </div>
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">新旧程度</label>
 				<div class="col-sm-5">
-					<input type="email" class="form-control" id="inputEmail3" placeholder="">
+					<input name="newpercent" class="form-control" id="inputEmail3" placeholder="">
 				</div>
 			  </div>
 		      <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">分类</label>
 				<div class="col-sm-5">
-					<select class="form-control" >
+					<select name="category" class="form-control" >
 						<option>代步工具</option>
 						<option>电子产品</option>
 						<option>数码配件</option>
@@ -153,7 +153,7 @@
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">联系电话</label>
 				<div class="col-sm-5">
-					<input type="email" class="form-control" id="inputEmail3" placeholder="">
+					<input name="tel"  class="form-control" id="inputEmail3" placeholder="">
 				</div>
 			  </div>
 			  <div class="form-group">
@@ -163,10 +163,14 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="form-group">
+			  <div class="form-group"><!--
 				<div class="col-sm-offset-2 col-sm-10">
-				  <button type="submit" class="btn btn-default">发布</button>
+				  <button id="releaseBut"  class="btn btn-default">发布</button>
 				</div>
+				--><div class="col-sm-offset-2 col-sm-10">
+				  <!--<a id="releaseBut" href="#" name="releaseBut" >发布</a>
+				--></div>
+				
 			  </div>
 			</form>
 		</div>
@@ -193,6 +197,27 @@
 	$("#agreeBut").click(function(){
 		$("#rulesModal").modal('show');
 	});
+	$("#releaseBut").click(function(){
+		$("#rulesModal").modal('show');
+	});
+	/*$("#releaseBut").click(function(){
+		console.log("debug");
+		//alert("debug");
+	});*/
+	/*alert("debug");
+		$.ajax({     
+		    url:'multiupload.action',     
+		    type:'post',     
+		    data:$('#releaseForm').serialize(),// 你的formid
+		    async : true, //默认为true 异步     
+		    error:function(){     
+		       alert('error');     
+		    },     
+		    success:function(data){     
+		       alert("OK");    
+		    }  
+		});
+	});*/
 	
 </script>
 </body>
