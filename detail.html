@@ -13,7 +13,7 @@
 	<style >
 		body{padding-top: 75px;color: #888}
 		#navbarf{background: white;border: none;}
-		#navbar {border-bottom: 1.5px solid #e7e7e7; padding: 10px 0 5px 0;}
+		#navbar {border-bottom: 1.5px solid #aaa; padding: 10px 0 5px 0;}
 		#toplogo{height: 50px;margin-top: 0;}
 		#toplogotxt{color: #D06C5C;font-weight: 900;font-size: 14pt;}
 		#postnav{}
@@ -25,18 +25,21 @@
 		#header1 img{height: 130px;margin-right: 40px;}
 		#typemenu{border-right: #e7e7e7 1px solid;height: 30px;}
 		#fadingaway{height: 47px !important; width: 190px;margin:0 0 0 20px !important;padding: 0}
-		#searchinput{height: 40px;margin-top: 45px;}
+		#searchinput{height: 40px;margin-top: 45px;border-radius: 20px;border: 1px solid;}
 		#searchbut{margin:45px 0 0 -2px;height:40px;}
 		.productimg{width: 450px;height: 450px;}
 		.productsmallimg{width:80px;height: 80px;margin:5px 0 5px 0;}
 		#productsmalldiv{padding: 10px 0 0 0;}
 		#productimgdiv{border-right: 1px #e7e7e7 solid;padding-top:10px;}
 		#producttextdiv{border-left: 1px #e7e7e7 solid;min-height: 460px;padding: 0px 0 0 20px;}
+		#producttextdiv h5{margin-top: 15px;font-size:12pt;}
 		#pname{margin: 10px 0 10px 0 }
 		#pprice{margin: 0;font-weight: bold;}
 		#pdivider{border-bottom: 0px solid #e7e7e7;height: 1px;}
 		.text-center{text-align: center}
-		#pdescription{margin-top: 10px;border-top:1px solid #e7e7e7;padding: 10px 0 0 0;margin-left: 10px;}
+		#pdescription{margin-top: 10px;border-top:1px solid #e7e7e7;padding: 10px 0 0 0;margin-left: 10px;font-weight: ;font-size:13pt !important}
+		#optionDiv{margin-left: 20px;}
+		#footer{margin-top: 100px;border-top:1px #aaa solid;height: 40px;padding-top: 10px;}
 	</style>
 
 </head>
@@ -57,7 +60,7 @@
             <li><a href="#" id="toplogotxt">STUDENTYEARS</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-			<li><a href="#" id="releaseBut"><span id="postnav">上传</span></a></li>  
+			<li><a href="#" id="releaseBut"><span id="postnav">发布信息</span></a></li>  
 			<li><a href="../navbar/"><span class="divider"></span></a></li>
             <li><a href="#" id="registerBut">注册</a></li>
 			<li><a href="../navbar/"><span class="divider"></span></a></li>
@@ -78,8 +81,8 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6">
-				<input id="searchinput" type="text" class="col-md-10 col-xs-10"/>
-				<button id="searchbut" class="btn btn-default">搜一搜</button>
+				<input id="searchinput" type="text" class="col-md-10 col-xs-10" value="搜一搜"/>
+<!--				<button id="searchbut" class="btn btn-default">搜一搜</button>-->
 			</div>
 		</div>
 		
@@ -102,8 +105,29 @@
 			<h5 >发布时间：2015-3-21</h5>
 			<h5 >浏览次数：189次</h5>
 			<div class="row"><div id="pdivider" class="col-sm-6"></div></div>
-			<div class="row"><span id="pdescription" class="col-sm-10">车子用了一年，但是中途电池被盗换过电池，电池用了不到半年，48v20a电瓶，车子一切功能完好，刹车灵敏，车况没的说，低价甩卖，价格绝对实惠，有意者尽快看车，欢迎试车
+			<div class="row">
+				<div id="optionDiv">
+					<a class="btn btn-default">赞一个(89)</a>
+					<a class="btn btn-default">一般般(19)</a>
+				</div>
+			</div>
+			<div class="row"><span id="pdescription" class="col-sm-9">车子用了一年，但是中途电池被盗换过电池，电池用了不到半年，48v20a电瓶，车子一切功能完好，刹车灵敏，车况没的说，低价甩卖，价格绝对实惠，有意者尽快看车，欢迎试车
 				(联系我的时候，请说明是在校园二手街看见的噢！)</span></div>
+		</div>
+	</div>
+	<!--<div class="container">
+		<div class="col-md-offset-2">
+			<span id="pdescription" class="col-md-offset-2 col-md-9">车子用了一年，但是中途电池被盗换过电池，电池用了不到半年，48v20a电瓶，车子一切功能完好，刹车灵敏，车况没的说，低价甩卖，价格绝对实惠，有意者尽快看车，欢迎试车
+				(联系我的时候，请说明是在校园二手街看见的噢！)
+				车子用了一年，但是中途电池被盗换过电池，电池用了不到半年，48v20a电瓶，车子一切功能完好，刹车灵敏，车况没的说，低价甩卖，价格绝对实惠，有意者尽快看车，欢迎试车
+				(联系我的时候，请说明是在校园二手街看见的噢！)车子用了一年，但是中途电池被盗换过电池，电池用了不到半年，48v20a电瓶，车子一切功能完好，刹车灵敏，车况没的说，低价甩卖，价格绝对实惠，有意者尽快看车，欢迎试车
+				(联系我的时候，请说明是在校园二手街看见的噢！)</span>
+		</div>
+		
+	</div>-->
+	<div class="container">
+		<div id="footer" class="text-center">
+			2014-2015, Student Years © by <a href="#">果壳里的宇宙</a>
 		</div>
 	</div>
 	
