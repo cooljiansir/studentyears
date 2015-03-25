@@ -40,7 +40,16 @@
 		#main .loc{text-align: center;margin-top: 20px;margin-bottom: 10px;}
 		.text-center{text-align: center}
 		.formlogo{width:150px;}
+		.ginputfile{border:2px #e7e7e7 solid;border-radius: 50px; width: 100px;height: 100px;background: url(images/fileuploader.png) no-repeat center;background-size: 80px 80px;float: left;}
+		.ginputfile:hover{border:2px #D06C5C solid;border-radius: 50px; width: 100px;height: 100px;background: url(images/fileuploader2.png) no-repeat center;background-size: 80px 80px;}
+		.ginputfile input[type="file"]{opacity: 0;width: 100%;height: 100%;border: 1px solid red;}
+		#previewdiv{height: 100px;border: 0px red solid;float: left;}
+		#previewdiv img{width:100px;height: 100px;margin: 0 10px 0 10px;}
+		#fileuploadrow{height: 120px;}
+		.gdivider{border: 1px solid #e7e7e7;margin: 10px 0 10px 0;position: absolute;}
+		.gpview{display: inline-block;}
 	</style>
+	
 
 </head>
 <body>
@@ -88,24 +97,53 @@
 		
     </div> <!-- /container -->
 	<div class="container">
-		<div class="col-md-offset-2 col-md-7 block-center">
-			 
+		<div class="col-md-offset-2 col-md-8 block-center">
+			
 			
 			<form class="form-horizontal ">
-			 
-    		  <input name="file" type="file" multiple />
+				<div class="form-group">
+					<label class="col-sm-2 control-label">上传图片</label>
+					<div class="col-sm-10" id="fileuploadrow">
+						<div id="previewdiv">
+<!--
+							<div class="gpview">
+								<img src="images/product1.jpg"/>
+								<div class="progress">
+									<div class="progress-bar">
+								  </div>
+								</div>
+							</div>
+							<div class="gpview">
+								<img src="images/product1.jpg"/>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+								  </div>
+								</div>
+							</div>
+-->
+						</div>
+						<div class="ginputfile">
+							<input id="fileSelect" name="fileSelect" class="fileSelect" type="file" multiple />
+						</div>
+					</div>
+				</div>
+				
+<!--				<div class="row gdivider"></div>-->
+		      
 			  <div class="form-group">
 				<label for="inputEmail3" class="col-sm-2 control-label">商品名</label>
 				<div class="col-sm-10">
-				  <input type="email" class="form-control" id="inputEmail3" placeholder="不多于25字">
+				  	<input type="email" class="form-control" id="inputEmail3" placeholder="不多于25字">
 				</div>
 			  </div>
+			
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">商品描述</label>
 				<div class="col-sm-10">
 					<textarea class="form-control" rows="5" placeholder="建议填写物品用途、新旧程度、原价等信息，至少15个字"></textarea>
 				</div>
 			  </div>
+				<div class="row gdivider"></div>
 			  <div class="form-group">
 				<label for="inputPassword3" class="col-sm-2 control-label">交易地点</label>
 				<div class="col-sm-5">
@@ -187,6 +225,28 @@
 	});
 	$("#releaseBut").click(function(){
 		alert("haha");
+	});
+	$("#fileSelect").change(function(){
+		console.log("debug");
+		if(this.files&&this.files[0]){
+			var reader = new FileReader();
+			reader.onload = function(e){
+				var str = "<div class=\"gpview\"><img src=\""+e.target.result+"\"/><div class=\"progress\">"+
+									"<div class=\"progress-bar\"></div></div></div>";
+				$("#previewdiv").append(str);
+			};
+			reader.onprogress = function(pe){
+				if(pe.lengthComputable){
+					var r = Math.floor(100*(pe.total / pe.loaded));
+					console.log("progress "+r);
+					$("#previewdiv").find(".progress-bar:last").css("width",r+"%");
+				}
+			};
+			reader.onloadend = function(pe){
+				
+			}
+			reader.readAsDataURL(this.files[0])
+		}
 	});
 	
 </script>
