@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+     "http://struts.apache.org/dtds/struts-2.0.dtd">
+ <struts>
+    <package name="json"  extends="json-default">
+        <action name="jslogin" class="com.studentyears.Login.JsLoginAction" method="login">
+               <result type="json"><param name="root">result</param></result>       
+        </action>
+        <action name="exist" class="com.studentyears.Login.JsLoginAction" method="exist">
+               <result type="json"><param name="root">result</param></result>       
+        </action>
+        <action name="clearsession" class="com.studentyears.AjaxAction.ClearSessionAction" method="clear">
+               <result type="json"><param name="root">result</param></result>       
+        </action>
+        <action name="searchAll" class="com.studentyears.ProcessAction.SearchAction" method="execute">
+               <result type="json"><param name="root">result</param></result>       
+        </action>
+        <action name="showcomment" class="com.studentyears.ProcessAction.ShowCommentAction" method="execute">
+            <result type="json"><param name="root">result</param></result> 
+        </action>
+        <action name="makecomment" class="com.studentyears.ProcessAction.CommentAction" method="execute">  
+			<result type="json"><param name="root">result</param></result> 
+        </action>
+        <action name="querycollege" class="com.studentyears.ProcessAction.PlacequeryAction" method="collegequery">  
+			<result type="json"><param name="root">result</param></result> 
+        </action>
+        <action name="querycampus" class="com.studentyears.ProcessAction.PlacequeryAction" method="campusquery">  
+			<result type="json"><param name="root">result</param></result> 
+        </action>
+        <action name="personPictureShow" class="com.studentyears.ProcessAction.UsercenterAction" method="execute">  
+			<result type="json"><param name="root">result</param></result> 
+        </action>
+     </package>
+    
+ </struts> 
