@@ -239,7 +239,7 @@
 			</div>
 		  </div>
 		</div>
-<script type="text/javascript"  src="js/studentyears.js"/>
+<script type="text/javascript"  src="js/studentyears.js"></script>
 <script type="text/javascript" >
 	$("#agreeBut").click(function(){
 		$("#rulesModal").modal('show');

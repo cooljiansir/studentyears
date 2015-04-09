@@ -100,36 +100,36 @@
 			<div >校园代步</div>
 		</div>
 		<div class="headersize he2 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i21.png">
+			<div >数码&amp;配件</br>手机/电脑/相机</div>
 		</div>
 		<div class="headersize he1 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i31.png">
+			<div >运动健身</div>
 		</div>
 		<div class="headersize he2 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i41.png">
+			<div >电器</br>冰箱/洗衣机</div>
 		</div>
 		<div class="headersize he1 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i51.png">
+			<div >生活娱乐</br>乐器/玩具</div>
 		</div>
 		<div class="headersize he2 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i61.png">
+			<div >图书教材</div>
 		</div>
 		<div class="headersize he1 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i71.png">
+			<div >衣服伞帽</div>
 		</div>
 		<div class="headersize he2 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i81.png">
+			<div >租赁</div>
 		</div>
 		<div class="headersize he1 text-center headeritem">
-			<img src="images/i11.png">
-			<div >校园代步</div>
+			<img src="images/i91.png">
+			<div >其他</div>
 		</div>
 	</div> <!-- /container -->
 	<div class="container"><!-- /container -->
