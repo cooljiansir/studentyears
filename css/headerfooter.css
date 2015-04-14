@@ -1,0 +1,29 @@
+body{padding-top: 130px;color: #888}
+#navbarf{background: #3cc2a5;height: 110px;}
+#toplogo{margin-top: 20px;height: 80px;}
+#gnavbar-right{border: 0px solid;padding-top: 30px;}
+#releaseBut{
+	background: white;
+	width: 120px;
+	height: 35px;border: 0px solid;
+	float: left;border-radius: 14px;box-sizing: content-box;}
+#releaseBut a{color:  #3cc2a5;font-size: 12pt;font-weight: 600;text-decoration: none;}
+#releaseBut img{height: 35px;border-radius: 18px;}
+#searchinput{border-radius: 20px;height: 35px;border: none;width: 240px;margin-left: 40px;padding-left:15px;
+			color: gray;font-size: 12pt;}
+
+#searchinput::-webkit-input-placeholder{color:  #3cc2a5;font-size: 12pt;font-weight: 600;margin-left: 10px;}
+#searchinput::-moz-placeholder{color:  #3cc2a5;font-size: 12pt;font-weight: 600;margin-left: 10px;}
+#searchinput:-ms-input-placeholder{color:  #3cc2a5;font-size: 12pt;font-weight: 600;margin-left: 10px;}
+#searchinput:-moz-placeholder{color:  #3cc2a5;font-size: 12pt;font-weight: 600;margin-left: 10px;}
+#searchinput:focus{border: none;}
+#gnavbarmenu{margin-top: 15px;color:white;font-size: 11pt;float:right;}
+#gnavbarmenu a{margin: 0 5px 0 5px;color:white}
+.downmenu{position: absolute;padding-top: 20px;margin-top: -20px;display: none;}
+.downmenu div{border: 1px solid #e7e7e7;background: #3cc2a5;padding: 20px;}
+.text-center{text-align: center}
+.float-right{float: right;}
+
+#footer {margin-top: 0px;border-top: 1px solid #e7e7e7;padding: 20px 0 20px 0;margin-top: 20px;}
+#footer img{width: 100%;position: absolute;z-index: -1;}
+/*#footertext{padding-top: 78px;}*/

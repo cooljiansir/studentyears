@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+	<title >青青校园</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js" ></script>
+	<script src="../js/bootstrap.min.js" ></script>
+	<link href="../css/mobileheader.css" rel="stylesheet">
+	<style >
+		#imgdiv img{width: 100%;}
+		#simgdivrow{float: left;background: #3cc2a5}
+		#simgdivrow .simgdiv{float: left;padding: 10px;width: 25%;}
+		#simgdivrow .simgdiv img{width: 100%;}
+		#simgdivrow .active{border: 1px solid #666;}
+		#gprice{color: #c40000;font-size:15pt;font-family: avenir,arial;width: 4em;border: 0px solid;}
+		#lookdiv{margin: 10px;}
+		#look{float: right;}
+		#namediv{clear: both;float: left;width: 100%;padding:0px 0 10px 0}
+		#collect{border-left: 1px solid #ccc;width:70px;text-align: center;float: right;padding: 0 15px 0 15px;height: 60px}
+		#collect a{text-decoration: none;color: #888;font-size: 12pt;}
+		#collect img{width: 35px;}
+		#gname{overflow: hidden;border: 0px solid;font-size: 11pt;padding: 10px;height: 60px;}
+		.divider{height: 15px; background: #eee;clear: both;border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;}
+		#detail{margin:10px 0 10px 0;}
+		#detail .grow{padding: 2px 10px 0 10px;font-size: 11pt;}
+		#detail .glabel{border:0px solid red;width: 6em;float: left;}
+		#detail .content{overflow: hidden;}
+		#destxt{padding: 10px;font-size: 11pt;}
+	</style>
+</head>
+<body>
+<div id="header">
+	<a href="index.html"><img id="logo" src="../images/logo_1.png"/></a>
+	<div id="menuBut" >
+		操作<img src="../images/b.png">
+	</div>
+	<div id="menudown">
+		<h5><a href="release.html">发布商品</a></h5>
+		<h5><a href="chooseschool.html">切换校区</a></h5>
+		<h5>我的发布</h5>
+		<h5>我的收藏</h5>
+		<h5>通知</h5>
+		<h5>退出</h5>
+	</div>
+</div>
+<div id="imgdiv">
+	<img src="../images/product0.jpg"/>
+</div>
+<!--
+<div id="simgdivrow">
+	<div class="simgdiv">
+		<div >
+			<img src="../images/product0.jpg"/>
+		</div>
+	</div>
+	<div class="simgdiv">
+		<div class="active">
+			<img src="../images/product1.jpg"/>
+		</div>
+	</div>
+	<div class="simgdiv">
+		<div >
+			<img src="../images/product2.jpg"/>
+		</div>
+	</div>
+	<div class="simgdiv">
+		<div >
+			<img src="../images/product3.jpg"/>
+		</div>
+	</div>
+</div>
+-->
+<div id="lookdiv">
+	<div id="look">浏览2132 回复12</div>
+	<div id="gprice">￥34.00</div>
+</div>
+<div id="namediv">
+	<div id="collect"><a href="#"><img src="../images/collect.png"/>收藏</a></div>
+	<div id="gname">0首付分期(送16G卡+壳膜)Meizu/魅族 魅蓝手机 移动4G 魅族手机</div>
+</div>
+<div class="divider">
+</div>
+<div id="detail">
+	<div class="grow">
+		<div class="glabel">交易地点</div>
+		<div class="content">中科院大学 ● 怀柔校区</div>
+	</div>
+	<div class="grow">
+		<div class="glabel">卖家</div>
+		<div class="content">王博士</div>
+	</div>
+	<div class="grow">
+		<div class="glabel">联系电话</div>
+		<div class="content">18782948199</div>
+	</div>
+	<div class="grow">
+		<div class="glabel">发布时间</div>
+		<div class="content">2015-4-14</div>
+	</div>
+</div>
+<div class="divider">
+</div>
+<div id="destxt">
+	捷安特8系列独有的27.5轮径技术，大气显档次，WTB坐垫，高级传动轴承，QUICKROAD胎纹设计，24速变速套件，成色如图所示，试车满意可小刀~(联系我的时候，请说明是在校园二手街看见的噢！)
+</div>
+<script type="text/javascript">
+	$("#menuBut").click(function(){
+		if($("#menudown").css("display")=="none"){
+			$("#menudown").show();
+		}else{
+			$("#menudown").hide();
+		}
+	});
+</script>	
+	
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+	<title >青青校园</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js" ></script>
+	<script src="../js/bootstrap.min.js" ></script>
+	<style >
+		#header{background:#3cc2a5;overflow: hidden;padding-bottom:5px;}
+		#topline{height: 2.4em;padding: 5px 10px 0 10px;border-bottom: 1px dashed #ccc;margin-bottom: 10px;font-size: 13pt;}
+		#backdiv{width:30px;float: left;}
+		#backdiv img{width: 20px;}
+		#toptxt{overflow: hidden;text-align: center;color: white}
+		#releaseBut{border: 1px solid;float: right;color: white;border-radius: 5px;padding: 0 10px 0 10px;}
+		#phorow{float: left;width: 100%}
+		.previewdiv{float: left;width:25%;margin-bottom: 5px;padding: 5px;}
+		.previewdiv .imgdiv{background: white;}
+		.previewdiv .imgdiv img{width: 100%;}
+		.previewdiv .operdiv{text-align: center;color: white;}
+		.previewdiv .operdiv a{color: white;text-decoration: none;}
+		#txtpho{text-align: center;color: white;font-size: 10pt;}
+		.addf input[type="file"]{border: 1px solid white;height: 100%; width: 100%;background-image: url(../images/product0.jpg); background-size: 100%; opacity: 0;}
+		.addfile{background:url(../images/addicon.png) no-repeat;background-size:40px 40px;background-position: center; border: 1px solid white;}
+		#main{border:0px solid;padding:10px;}
+		#main .grow{border-bottom: 1px solid #3cc2a5;padding: 8px 0 8px 0;}
+		#main .glabel{float: left;color: #777;font-size: 11pt;width: 5.2em;text-align: right;padding-right: 0.8em}
+		#main .gcontent{border: 0px solid;overflow: hidden;}
+		#main .gstrong{border-bottom: 2px solid #3cc2a5;}
+		#main .gcontent .inp{border: none;width: 100%;}
+		#main .gcontent .inp:focus{outline: none;}
+	</style>
+</head>
+<body>
+<form id="releaseForm">
+	<div id="header">
+		<div id="topline">
+			<div id="backdiv"><a href="javascript:history.back()"><img src="../images/arr_left.png"></a></div>
+			<div id="releaseBut">完成</div>
+			<div id="toptxt">发布商品</div>
+		</div>
+		<div id="phorow">
+<!--
+			<div class="previewdiv pho">
+				<div class="imgdiv"><img src="../images/product0.jpg"/></div>
+				<div class="operdiv">0%</div>
+			</div>
+			<div class="previewdiv pho">
+				<div class="imgdiv"><img src="../images/product2.jpg"/></div>
+			</div>
+			<div class="previewdiv pho">
+				<div class="imgdiv"><img src="../images/product4.jpg"/></div>
+			</div>
+-->
+			<div class="addf previewdiv">
+				<div class="addfile">
+					<input class="fileSelect" type="file" multiple accept="image/*"/>
+				</div>
+				<div class="operdiv">添加图片</div>
+			</div>
+		</div>
+		<div id="txtpho">
+			最多可上传4张照片
+		</div>
+	</div>
+	<div id="main">
+		<div class="grow">
+			<div class="glabel">商品名称</div>
+			<div class="gcontent">
+				<input class="inp" type="text" placeholder="最多25字"/>
+			</div>
+		</div>
+		<div class="grow gstrong">
+			<div class="glabel">商品描述</div>
+			<div class="gcontent">
+				<textarea rows="2" class="inp" placeholder="建议填写物品用途、新旧程度、原价等信息，至少15个字"></textarea>
+			</div>
+		</div>
+		<div class="grow gstrong">
+			<div class="glabel">交易地点</div>
+			<div class="gcontent">
+				<select class="inp">
+					<option>请选择学校</option>
+					<option>中国科学院大学</option>
+				</select>
+				<select class="inp">
+					<option>请选择校区</option>
+					<option>怀柔校区</option>
+					<option>中关村校区</option>
+					<option>玉泉路校区</option>
+					<option>奥运村校区</option>
+				</select>
+			</div>
+		</div>
+		<div class="grow">
+			<div class="glabel">商品价格</div>
+			<div class="gcontent">
+				<input type="text" class="inp" placeholder="￥"/>
+			</div>
+		</div>
+		<div class="grow gstrong">
+			<div class="glabel">商品分类</div>
+			<div class="gcontent">
+				<select class="inp">
+					<option>请选择分类</option>
+					<option>代步工具</option>
+					<option>电子产品</option>
+					<option>数码配件</option>
+					<option>家用电器</option>
+					<option>图书教材</option>
+					<option>特色服务</option>
+					<option>其他</option>
+				</select>
+			</div>
+		</div>
+		<div class="grow">
+			<div class="glabel">联系电话</div>
+			<div class="gcontent">
+				<input type="text" class="inp" />
+			</div>
+		</div>
+		<div class="grow">
+			<div class="glabel">称呼您..?</div>
+			<div class="gcontent">
+				<input type="text" class="inp" placeholder="王博士"/>
+			</div>
+		</div>
+	</div>
+</form>
+<script type="text/javascript">
+	$("#menuBut").click(function(){
+		if($("#menudown").css("display")=="none"){
+			$("#menudown").show();
+		}else{
+			$("#menudown").hide();
+		}
+	});
+	function addButSize(){
+		$(".previewdiv.addf:last .addfile").height($(".previewdiv.addf:last .addfile").width());
+	};
+	$("#header").resize(addButSize);
+	addButSize();
+	function addFile(){
+		var fileinput = $(".previewdiv.addf:last .addfile input")[0];
+		if(fileinput.files&&fileinput.files[0]){
+			console.log("debug "+fileinput.files[0]);
+			var str = "<div class=\"previewdiv pho\"><div class=\"imgdiv\"><img /></div><div class=\"operdiv\">0%</div></div>";
+			$(str).insertBefore(".previewdiv.addf:last");
+			$(".previewdiv.pho:last img").height($(".previewdiv.pho:last img").width());
+			$(".previewdiv.addf:last").hide();
+			str="<div class=\"addf previewdiv\"><div class=\"addfile\"><input class=\"fileSelect\" type=\"file\" multiple accept=\"image/*\"/></div></div>";
+			if($(".previewdiv.pho").length<4){
+				$(".previewdiv.addf:last").clone(true).insertAfter(".previewdiv.addf:last");
+				$(".previewdiv.addf:last").show();
+			}
+			$(".previewdiv.addf:last .addfile").height($(".previewdiv.addf:last .addfile").width());
+			var reader = new FileReader();
+			reader.onload = function(e){
+				$(".previewdiv.pho:last img").attr("src",e.target.result);
+			};
+			reader.onprogress = function(pe){
+				if(pe.lengthComputable){
+					var r = Math.floor(100 * pe.total / pe.loaded);
+					$(".previewdiv.pho:last .operdiv").html(""+r+"%");
+				}
+			};
+			reader.onloadend = function(pe){
+				var str = "<a href='#'>删除X</a>"
+				$(".previewdiv.pho:last .operdiv").html(str);
+				$(".previewdiv.pho:last .operdiv a").click(function(){
+					//alert("haha");
+					$(this).parents(".previewdiv.pho").next(".previewdiv.addf").remove();
+					$(this).parents(".previewdiv.pho").remove();
+					if($(".previewdiv.pho").length==3){
+						$(".previewdiv.addf:last").clone(true).insertAfter(".previewdiv.addf:last");
+						$(".previewdiv.addf:last").show();
+					}
+				});
+			}
+			reader.readAsDataURL(this.files[0]);
+		}
+	};
+	$(".fileSelect").change(addFile);
+	
+</script>
+	
+	
+</body>
+</html>

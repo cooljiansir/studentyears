@@ -14,19 +14,21 @@ $(".gdropdown").click(function(){
 		$(this).children("span").addClass("glyphicon-menu-down");
 	}
 });
-/*$(".gdropdown").mouseleave(function(){
-	$(this).next().slideUp(200);
-});
-$(".gdropdown-menu").mouseleave(function(){
-	$(this).slideUp(200);
-});*/
 
 $("#loginBut").click(function(){
 	$('#loginModal').modal('show');
 });
+
 $("#registerBut").click(function(){
 	$('#registerModal').modal('show');
 });
-$("#releaseBut").click(function(){
-	$('#releaseModal').modal('show');
+
+$(".hoverdown").mouseover(function(){
+	$(this).next(".downmenu").show();
+	$(this).next(".downmenu").offset($(this).offset());
+	$(this).next(".downmenu").data("a-hover",true);
+});
+
+$(".downmenu").mouseleave(function(){
+	$(this).hide();
 });

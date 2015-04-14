@@ -1,0 +1,8 @@
+body{overflow: auto;padding-top: 50px;}
+#logo{height: 40px;margin: 5px;}
+#header{height: 50px;background: #3cc2a5;position: fixed;width: 100%;top: 0;}
+#menuBut{margin: 5px; border:1px solid white;height: 40px;width: 60px;float:right;padding-top: 8px;border-radius: 8px;color:white;text-align: center}
+#menudown{position: absolute;right: 0;padding-right: 0px;background: #3cc2a5;min-width: 100px;width: 30%;border:1px solid white;color: white;padding-left: 10px;display: none;}
+#menudown a{text-decoration: none;color: white;}
+		
+		

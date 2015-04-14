@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,initial-scale=1,user-scalable=no">
+	<title >青青校园</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/jquery.min.js" ></script>
+	<script src="../js/bootstrap.min.js" ></script>
+	<link href="../css/mobileheader.css" rel="stylesheet">
+	<style >
+		#searchDiv{padding: 10px 10px 10px 10px;border: 0px solid red;overflow: hidden;margin: 0;}
+		#searchBut{
+			background: url(../images/searchicon.png) no-repeat;
+			border: 1px solid #3cc2a5;width: 100%;height: 40px;padding-left: 30px;}
+		#ul1{border: 1px solid #3cc2a5;margin: 10px;padding: 0;list-style: none;}
+		#ul1 li div{border-bottom: 1px solid #e6e6e6;padding: 5px;}
+		#ul1 li li div{padding-left: 4em;}
+		#ul1 ul{list-style: none;padding: 0;display: none;}
+		#pleaseS{background:#3cc2a5;color: white;padding: 5px;}
+	</style>
+</head>
+<body>
+<div id="header">
+	<a href="index.html"><img id="logo" src="../images/logo_1.png"/></a>
+	<div id="menuBut" >
+		操作<img src="../images/b.png">
+	</div>
+	<div id="menudown">
+		<h5><a href="release.html">发布商品</a></h5>
+		<h5><a href="chooseschool.html">切换校区</a></h5>
+		<h5>我的发布</h5>
+		<h5>我的收藏</h5>
+		<h5>通知</h5>
+		<h5>退出</h5>
+	</div>
+</div>
+<div id="searchDiv">	
+	<input id="searchBut" type="text" placeholder="搜索学校/校区"/>
+</div>
+<div>
+	<ul id="ul1">
+		<div id="pleaseS">请选择校区</div>
+		<li>
+			<div ><span class="glyphicon glyphicon-menu-down" ></span> <a >中国科学院大学</a></div>
+			<ul>
+				<li><div><a>中关村校区</a></div></li>
+				<li><div><a>雁栖湖校区</a></div></li>
+				<li><div><a>奥运村校区</a></div></li>
+				<li><div><a>玉泉路校区</a></div></li>
+			</ul>
+		</li>
+		<li>
+			<div><span class="glyphicon glyphicon-menu-down" ></span> <a>四川大学</a></div>
+			<ul>
+				<li><div><a>江安校区</a></div></li>
+				<li><div><a>望江校区</a></div></li>
+				<li><div><a>华西校区</a></div></li>
+			</ul>
+		</li>
+		<li>
+			<div><span class="glyphicon glyphicon-menu-down" ></span> <a>四川大学</a></div>
+			<ul>
+				<li><div><a>江安校区</a></div></li>
+				<li><div><a>望江校区</a></div></li>
+				<li><div><a>华西校区</a></div></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	$("#menuBut").click(function(){
+		if($("#menudown").css("display")=="none"){
+			$("#menudown").show();
+		}else{
+			$("#menudown").hide();
+		}
+	});
+	$("#ul1>li div").click(function(){
+		if($(this).next("ul").css("display")=="none"){
+			$(this).next("ul").slideDown(200);
+			$(this).find(".glyphicon").removeClass("glyphicon-menu-down");
+			$(this).find(".glyphicon").addClass("glyphicon-menu-up");
+		}else{
+			$(this).next("ul").slideUp(200);
+			$(this).find(".glyphicon").removeClass("glyphicon-menu-up");
+			$(this).find(".glyphicon").addClass("glyphicon-menu-down");
+		}
+	});
+</script>
+	
+	
+</body>
+</html>
